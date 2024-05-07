@@ -1,0 +1,80 @@
+$bgColor: #e0ddd5;
+$textColor: #3e4154;
+$borderColor: #ccaf68;
+$font: "Google Sans", sans-serif;
+
+body {
+  background-color: $bgColor;
+  color: $textColor;
+  font-family: $font;
+}
+
+#nav {
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  font-size: 2.5rem;
+  text-align: center;
+  background-color: $bgColor;
+}
+
+h1 {
+  margin: 0;
+}
+
+#list-note {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+  z-index: 100;
+
+  &.visible {
+    display: block;
+  }
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+}
+
+#newBtn,
+#listBtn {
+  background-color: transparent;
+  width: 25%;
+  border: 1px solid $borderColor;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: $textColor;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  input {
+    text-align: center;
+  }
+
+  textarea {
+    text-align: center;
+  }
+}
+
+#list-button {
+  display: flex;
+  gap: 5px;
+  button {
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+  }
+}
